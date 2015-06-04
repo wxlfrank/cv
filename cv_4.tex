@@ -1,0 +1,282 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Column One Page Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (24/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro (The CV Inn)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
+
+\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage[usenames,dvipsnames,table]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{PT Sans} % Main document font
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{PT Sans} % Font for your name at the top
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{701112} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{titlesec} % Allows creating custom \section's
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+\usepackage{tabu}
+%\usepackage{epstopdf}
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\sffamily\Huge Xiaoliang Wang} % Your name
+    \\
+%{\color{headings}Curriculum Vit\\[15pt]\par} % Curriculum vitae text in the Zapfino font
+	
+%----------------------------------------------------------------------------------------
+\begin{minipage}[t]{0.44\textwidth} % Start the right-hand side of the page
+    \vspace{0pt} % Trick for alignment
+    
+    \section{Position Interested}
+    
+    \begin{tabular}{m{45pt}c}
+        \raisebox{6ex}{\textbf{Java developer}}& %\includegraphics[width=0.5\textwidth]{img/posten.png}
+    \end{tabular}
+    
+    %----------------------------------------------------------------------------------------
+    %	COLORED BOX
+    %----------------------------------------------------------------------------------------
+    \section{Contact}
+    \colorbox{white}{\textcolor{black}{
+            \begin{tabular}{c|p{4.3cm}}
+                \textifsymbol{18} & Vadmyrveien 2, 5172 Bergen \\ % Address
+                \Mobilefone & 45029792 \\ % Phone number
+                \Letter & \href{mailto:wxlfrank@gmail.com}{wxlfrank@gmail.com} \\ % Email address
+                %\Keyboard & \href{http://www.johnsmith.com}{http://www.johnsmith.com} \\ % Website
+            \end{tabular}
+        }
+    }\\
+    \section{About Me}
+    
+    \begin{itemize}[label={\textcolor{shade}\textbullet}]
+        \setlength{\itemsep}{0.1\baselineskip}
+        \item worked on academical research focusing on software development methodology
+        \item pursue industrial career in software engineering %, especially mobile application development and web application development
+        \item interested in software analysis and design, software development techniques
+        \item like to learn new skills, communicate and discuss with friends, hiking and badminton
+    \end{itemize}
+    %----------------------------------------------------------------------------------------
+    %	EDUCATION
+    %----------------------------------------------------------------------------------------
+    
+    \section{Education} 
+    
+    \begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
+        
+        %------------------------------------------------
+        % EDUCATION 1
+        %------------------------------------------------
+        
+        2011 -- \textsc{Present} & \textbf{Doctor of Philosophy} \\ 
+        & \textsc{Computer Science} \\ 
+        & \textit{Bergen University}\\
+        & \textit{Teaching Assistant in HiB}\\
+        
+        %------------------------------------------------
+        % EDUCATION 2
+        %------------------------------------------------
+        
+        2006--2009 & \textbf{Master of Science} \\ 
+        & \textsc{Computer Science} \\ 
+        & \textit{Institute of Software,}\\
+        & \textit{Chinese Academy of Sciences}
+        %----------------------------------------------------------------------------------------
+        
+    \end{tabular}\\[10pt]
+    
+    %----------------------------------------------------------------------------------------
+    %	COMPUTER SKILLS
+    %----------------------------------------------------------------------------------------
+    
+    \section{Programming Skills} 
+    
+    \begin{tabular}{R{85pt}L{140pt}}
+        Programming Language
+        & Java (6 years+), C, C++, Bash, php, Javascript, SQL, UML, OCL\\[1ex]
+        Operation System
+        & Linux, Windows\\[1ex]
+        Platform tools & Eclipse, svn, git, maven
+    \end{tabular}\\
+    
+    \section{Language}
+    
+    \begin{tabular}{R{80pt}L{160pt}}
+        Mother Tongue & Chinese\\[1ex]
+        Second Language & English, Norsk (litt) %\\[1ex]
+        %Other & Norwegian (litt)
+    \end{tabular}\\
+    \section{Reference}
+    \textbf{Yngve Lamo}   Supervisor in H\o gskolen i Bergen\\
+    \Mobilefone \quad 55 58 75 67\\
+    \Letter \quad \href{mailto:yla@hib.com}{yla@hib.com}
+    
+    %----------------------------------------------------------------------------------------
+    
+\end{minipage} % End right-hand side of the page
+\quad
+\begin{minipage}[t]{0.5\textwidth} % Start the left-hand side of the page
+\vspace{0pt} % Trick for alignment
+	
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Academic Experience} 
+
+%------------------------------------------------
+% WORK EXPERIENCE 1
+%------------------------------------------------
+\begin{tabu}{L{65pt}R{180pt}} % Start a table with two columns, one for dates and one for qualifications
+    
+    
+    %------------------------------------------------
+    % EDUCATION 1
+    %------------------------------------------------
+    \rowfont{\color{shade}}
+    2011 -- \textsc{Present} & \textit{Bergen University}\\
+     
+    \rowfont{\color{shade}}
+    \vspace{-1mm} \textit{PhD student} &  \vspace{-1mm} \textit{Verification in Model Driven Engineering}
+\end{tabu}
+\\
+\linebreak
+
+%{\raggedright\textit{Graduate Student Researcher}}{\raggedleft\textsc{2011 -- Present}\par}
+
+%{\raggedright\large Trader at Enoi s.p.a., Milan\\
+%\textit{Physical Natural Gas Trading}\\[5pt]}
+
+\paragraph{Academic Work}\normalsize{Model Driven Engineering is a methodology to construct software from models by automatic model transformations. My research in DPF project~\url{dpf.hib.no} is about verification on model and model transformation to ensure that they fulfil the expected requirements.}
+\paragraph{Practical Work}\normalsize
+{\begin{itemize}[label={\textcolor{shade}\textbullet}]
+        \setlength{\itemsep}{0.1\baselineskip}
+    \item develop and maintain the modelling tools of DPF using MVC pattern
+    \item construct the signature editor to specify predicates
+    \item construct the graph constraint editor
+    \item translate models and model transformations into Alloy specification, and verify by the Alloy Analyzer
+    \item translate the analysis result as models in DPF
+    \item instruct master students on their programming projects
+    \item  all these works are done in Eclipse framework in Java.
+\end{itemize}}
+
+\begin{tabu}{L{65pt}R{180pt}} % Start a table with two columns, one for dates and one for qualifications
+    
+    %------------------------------------------------
+    % EDUCATION 1
+    %------------------------------------------------
+    \rowfont{\color{shade}}
+    2006 -- 2009 & \textit{Institute of Software,} \\ 
+    \rowfont{\color{shade}}
+    \vspace{-1mm} & \vspace{-1mm}\textit{Chinese Academy of Sciences}\\
+    \rowfont{\color{shade}}
+    \vspace{-1mm} \textit{Master student} &  \vspace{-1mm}\textit{Bounded model checking}
+\end{tabu}
+%------------------------------------------------
+% WORK EXPERIENCE 2
+%------------------------------------------------
+\paragraph{Academic Work}\normalsize{My research is to use bouned model checking technique to verify timed automata using SMT solver}
+
+\textbf{Practical Work}\normalsize{
+    \begin{itemize}[label={\textcolor{shade}\textbullet}]
+        \setlength{\itemsep}{0.1\baselineskip}
+        \item added functions to the model checking tool NuSMV to support asynchronous transitions
+        \item translated time automata in UPPAAL and properties to be checked into SMT specification
+        \item All the works here were done in C++
+\end{itemize}}
+
+\section{Professional Experience}
+%------------------------------------------------
+% WORK EXPERIENCE 5
+%------------------------------------------------
+\begin{tabu}{L{65pt}R{180pt}} % Start a table with two columns, one for dates and one for qualifications
+    
+    
+    %------------------------------------------------
+    % EDUCATION 1
+    %------------------------------------------------
+    \rowfont{\color{shade}}
+    2009 -- 2011 & \textit{UNU-IIST, Macau}\\
+    
+    \rowfont{\color{shade}}
+    \vspace{-1mm} \textit{Project Staff} &  \vspace{-1mm} \textit{rCOS tool development}\\ 
+\end{tabu}\\
+
+\normalsize{The rCOS tool supports modelling, analysis and verification; I implemented and maintained the tool to support methods initiated by rCOS academic research. The works was done in Eclipse framework in Java.}\\
+\begin{tabu}{L{65pt}R{180pt}} % Start a table with two columns, one for dates and one for qualifications
+    
+    
+    %------------------------------------------------
+    % EDUCATION 1
+    %------------------------------------------------
+    \rowfont{\color{shade}}
+    2008.03 -- 05 & \textit{Lenovo Research Academy}\\
+    
+    \rowfont{\color{shade}}
+    \vspace{-1mm} \textit{Intern} &  \vspace{-1mm} \textit{Internet Data Collection}\\ 
+\end{tabu}\\
+
+\normalsize{In the project, we designed and implemented a system to collect and update the data from Internet. The data collection was implemented in C++ while the front end to show the system information was in PHP. }
+%----------------------------------------------------------------------------------------	
+
+\end{minipage} % End the left-hand side of the page
+
+\end{document}  

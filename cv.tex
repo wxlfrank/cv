@@ -1,0 +1,171 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[12pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{marvosym}
+\usepackage{xcolor}
+%\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\titlespacing*{\subsection}{0pt}{0.2em}{0.2em}
+%\usepackage{textcomp}
+%\usepackage{tgpagella}
+\definecolor{shade}{HTML}{701112}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headrows}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\color{shade}\LARGE \textbf{Xiaoliang Wang}}\\
+\vspace{0.4em}
+Vadmyrveien 2, 5172 Loddefjord, Bergen, Norway \quad {\color{shade}\Large\Mobilefone} 45029792 \quad {\color{shade}\Large\Letter} wxlfrank@gmail.com
+\vspace{-0.5em}
+\end{center}
+
+\hrule
+\vspace{0.5em}
+\subsection*{\color{shade}OBJECTIVE}
+To obtain a full-time job as a software developer
+\subsection*{\color{shade}SUMMARY}
+\begin{itemize}[leftmargin=*]
+    \parskip=0em
+    \item More than 6 years programming in Java for software development 
+    %\item Strong background in computer science and software engineering through academic study
+    \item Proficient in Java (6 years+),  php, Javascript, SQL, UML, OCL, Eclipse, svn, git, maven
+    \item Fluent in English and collaborative in teams
+\end{itemize}
+\vspace{-0.5em}
+\subsection*{\color{shade}EDUCATION}
+\begin{itemize}[leftmargin=*]
+    \parskip=0em
+    \item
+    \headrows
+    {\textbf{Bergen University, Norway}}
+    {\textbf{2011-present}}
+    \\\vspace{-0.2em}
+    \headrows
+    {\emph{PhD Software Engineering}}{Model Driven Engineering}
+%    \begin{itemize}[leftmargin=-0.1em]
+%        \item[]Model Driven Engineering is a methodology to construct software from models by automatic model transformations. My research in DPF project~\url{dpf.hib.no} is about verification on model and model transformation to ensure that they fulfil the expected requirements. 
+%    \end{itemize}
+
+\end{itemize}
+\vspace{-0.8em}
+\begin{itemize}[leftmargin=*]
+    \parskip=0.2em
+    \item
+    \headrows
+    {\textbf{Chinese Academy of Sciences, China}}
+    {\textbf{2006--2009}}
+    \\
+    \headrows
+    {\emph{Master of Science}}{Computer Science}
+%    \begin{itemize}[leftmargin=-0.1em]
+%        \item[]My research is to use bouned model checking technique to verify timed automata using SMT solver
+%    \end{itemize}
+\end{itemize}
+\vspace{-0.5em}
+\subsection*{\color{shade}EXPERIENCE}
+
+\begin{itemize}[leftmargin=*]
+	\parskip=0.2em
+	\item
+	\headrows
+		{\textbf{DPF Project }}
+		{\textbf{Bergen University College}}
+	\\
+	\headrows
+		{\emph{Software Developer \& Project Manager}}
+		{\emph{2011-present}}
+	\begin{itemize}[label={{\Forward}}, leftmargin=1.3em]
+        \setlength{\itemsep}{0.1\baselineskip}
+        \item published two papers as the first author and one paper as the second author
+        \item researched and implemented a tool to  verify models and model transformations 
+        \item designed and implemented a tool to specify model constraints
+        \item redesigned the DPF modelling tool to store and retrieve model in XML
+        \item maintained the DPF modelling tool to correct errors and upgrade user interface 
+        \item instructed master students on their programming projects
+        \item completed these works in Eclipse framework in Java on Linux system
+    \end{itemize}
+
+	\item
+	\headrows
+		{\textbf{rCOS Project}}
+		{\textbf{UNU-IIST, Macao}}
+	\\
+	\headrows
+		{\emph{Software Developer}}
+		{\emph{2009 -- 2011}}
+	\begin{itemize}[label={{\Forward}}, leftmargin=1.3em]
+        \setlength{\itemsep}{0.1\baselineskip}
+        \item implemented new  functions according to requirements from rCOS academic researchers
+        \item maintained existing rCOS modelling tools
+        \item completed this work in Eclipse framework in Java on Linux system
+    \end{itemize}
+
+	\item
+    \headrows
+    {\textbf{Master Project}}
+    {\textbf{Institute of Software, China}}
+    \\
+    \headrows
+    {\emph{Master Student}}
+    {\emph{2006 -- 2009}}
+    \begin{itemize}[label={{\Forward}}, leftmargin=1.3em]
+        \setlength{\itemsep}{0.1\baselineskip}
+        \item added functions to the model checking tool NuSMV to support asynchronous transitions
+        \item translated time automata in UPPAAL and properties into SMT specification for verification
+        \item completed this work C++ on Linux system       
+    \end{itemize}
+	\item
+    \headrows
+    {\textbf{Internship Project}}
+    {\textbf{Lenovo Research Academy, China}}
+    \\
+    \headrows
+    {\emph{Intern}}
+    {\emph{2008.03 -- 05}}
+    \begin{itemize}[label={{\Forward}}, leftmargin=1.3em]
+        \setlength{\itemsep}{0.1\baselineskip}
+        \item designed and implemented a system to collect and update the data from Internet
+        \item implemented the data collection in C++ while the front end  in PHP and Javascript
+    \end{itemize}
+\end{itemize}
+
+\end{document}
